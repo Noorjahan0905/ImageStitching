@@ -4,6 +4,43 @@ Image stitching with Raspberry Pi 4 involves capturing overlapping images using 
 
 <img src="https://github.com/user-attachments/assets/db5e9ff8-2b53-45c7-80e8-0c066e2e252a" width="500">
 
+# METHODOLOGY
+Setup Hardware:
+Connect the Pi Camera Module(s) to the Raspberry Pi 4.
+Mount the camera for stable image capture, ensuring overlapping fields of view.
+Capture Images:
+
+Use Python with picamera or OpenCV to capture sequential images.
+Ensure about 30-50% overlap between consecutive images for better stitching.
+Preprocessing:
+
+Convert images to grayscale for faster processing.
+Apply noise reduction (e.g., Gaussian blur) to improve feature detection.
+Feature Detection:
+
+Use OpenCV methods like SIFT, SURF, or ORB to identify key points and descriptors in the overlapping areas.
+Feature Matching:
+
+Match features between consecutive images using techniques like FLANN or BFMatcher to find corresponding points.
+Homography Estimation:
+
+Compute the transformation matrix (homography) to align one image onto the other.
+Use RANSAC to eliminate outliers and improve accuracy.
+Image Warping:
+
+Warp the images based on the computed homography to align them spatially.
+Blending:
+
+Seamlessly blend overlapping regions using feathering, multi-band blending, or alpha blending to reduce visible seams.
+Output Panorama:
+
+Merge aligned images into a single panoramic output using OpenCV’s stitching functions.
+Optimization:
+
+Optimize code to run efficiently on the Pi 4 by leveraging its GPU with OpenCL or using lightweight libraries.
+Display/Save:
+
+Display the panorama on a connected screen or save it using supported formats (e.g., PNG or JPEG).
 # Results
 
 <div style="text-align: center;">
