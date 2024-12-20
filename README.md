@@ -1,1 +1,1 @@
-# ImageStitching
+# ImageStitchingUsingRaspberrypi
