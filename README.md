@@ -1,4 +1,5 @@
 # ImageStitchingUsingRaspberrypi
+Image stitching with Raspberry Pi 4 involves capturing overlapping images using cameras like the Pi Camera Module. These images are aligned based on features using algorithms such as SIFT or ORB. Software like OpenCV processes the images to create a seamless panorama. The Pi 4's robust CPU and GPU make it suitable for real-time stitching in lightweight setups.
 # Functional block diagram
 
 <img src="https://github.com/user-attachments/assets/db5e9ff8-2b53-45c7-80e8-0c066e2e252a" width="500">
